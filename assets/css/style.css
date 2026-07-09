@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --color-primary: #1e3a8a; /* Royal Blue */
-  --color-secondary: #d97706; /* Gold/Amber */
-  --color-accent: #f3f4f6; /* Light Grey */
-  --color-dark-blue: #0f172a; /* Dark Blue */
+  --color-primary: #0B5ED7; /* Royal Blue */
+  --color-secondary: #F4B400; /* Gold */
+  --color-accent: #F8F9FA; /* Light Section Background */
+  --color-dark-blue: #091E3A; /* Dark Blue */
   --font-sans: 'Poppins', sans-serif;
 }
 
 body {
   font-family: var(--font-sans);
-  background-color: #ffffff;
-  color: #1e293b;
+  background-color: #FFFFFF;
+  color: #1F2937; /* Clean, high-contrast dark grey */
 }
 
 /* Custom Fade-in Animation */
