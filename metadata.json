@@ -1,0 +1,6 @@
+{
+  "name": "His Grace School",
+  "description": "Molding Lives for Greatness - Nursery, Primary and Secondary School Management System",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
