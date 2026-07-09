@@ -5,7 +5,7 @@
   "description": "His Grace School - Pure Static HTML5, CSS3, and JavaScript Website",
   "scripts": {
     "dev": "node server.js",
-    "build": "echo 'No build required'",
+    "build": "node build.js",
     "lint": "echo 'No lint required'"
   }
 }
