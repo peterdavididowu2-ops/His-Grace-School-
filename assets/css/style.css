@@ -1,16 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-@import "tailwindcss";
 
-@theme {
-  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+:root {
   --color-primary: #1e3a8a; /* Royal Blue */
   --color-secondary: #d97706; /* Gold/Amber */
   --color-accent: #f3f4f6; /* Light Grey */
   --color-dark-blue: #0f172a; /* Dark Blue */
+  --font-sans: 'Poppins', sans-serif;
 }
 
 body {
   font-family: var(--font-sans);
   background-color: #ffffff;
   color: #1e293b;
+}
+
+/* Custom Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Custom Smooth Scroll */
+html {
+  scroll-behavior: smooth;
 }

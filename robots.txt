@@ -1,0 +1,7 @@
+# His Grace School - robots.txt
+# Traditional Static Web Crawler Directions
+
+User-agent: *
+Allow: /
+
+Sitemap: https://hisgraceschools.edu.ng/sitemap.xml
