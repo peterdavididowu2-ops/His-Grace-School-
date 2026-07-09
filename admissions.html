@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admissions Info - His Grace School</title>
+    <title>Admissions - His Grace School</title>
     <!-- Tailwind Play CDN for high-fidelity responsive styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -11,10 +11,10 @@
         theme: {
           extend: {
             colors: {
-              primary: '#1e3a8a',      // Royal Blue
-              secondary: '#d97706',    // Gold
-              accent: '#f3f4f6',       // Light Grey
-              'dark-blue': '#0f172a',  // Dark Blue
+              primary: '#0B5ED7',      // Royal Blue
+              secondary: '#F4B400',    // Gold
+              accent: '#F8F9FA',       // Light Section Background
+              'dark-blue': '#091E3A',  // Dark Blue
             },
             fontFamily: {
               sans: ['Poppins', 'sans-serif'],
@@ -51,7 +51,7 @@
           <nav class="hidden lg:flex items-center space-x-1">
             <a href="index.html" class="px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 text-gray-600 hover:bg-accent hover:text-primary">Home</a>
             <a href="about.html" class="px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 text-gray-600 hover:bg-accent hover:text-primary">About Us</a>
-            <a href="admissions.html" class="px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 bg-primary text-white">Admissions</a>
+            <a href="admissions.html" class="px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 bg-primary text-white font-semibold">Admissions</a>
             <a href="contact.html" class="px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 text-gray-600 hover:bg-accent hover:text-primary">Contact</a>
 
             <!-- Separator -->
@@ -113,178 +113,120 @@
       <!-- Page Header Banner -->
       <section class="bg-gradient-to-r from-primary to-dark-blue text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
-          <span class="text-xs font-bold uppercase tracking-widest text-secondary block mb-1">Join our family</span>
+          <span class="text-xs font-bold uppercase tracking-widest text-secondary block mb-1">Join Our Academic Family</span>
           <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-tight">
-            Admissions Procedures & Fees
+            Admissions Information
           </h1>
           <p class="text-gray-300 mt-2 max-w-xl text-sm sm:text-base leading-relaxed">
-            Everything you need to know about enrollments, requirements, and affordable payment options.
+            Welcome to the entry gateway of His Grace School. Learn about our entry paths, expectations, available classrooms, and documentation guidelines.
           </p>
         </div>
       </section>
 
-      <!-- Step-by-Step Admissions Process -->
-      <section class="py-20 bg-white">
+      <!-- Requirements and Classes Grid -->
+      <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-xs font-bold tracking-widest text-secondary uppercase block mb-1">Easy Enrollment</span>
-            <h2 class="text-3xl font-extrabold text-primary uppercase tracking-tight">How to Apply</h2>
-            <p class="mt-3 text-gray-500 text-sm leading-relaxed">
-              We have structured a highly transparent and seamless four-step admissions track.
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <!-- Step 1 -->
-            <div class="text-center relative">
-              <div class="h-16 w-16 rounded-2xl bg-primary text-white mx-auto flex items-center justify-center font-bold text-xl mb-4 shadow-md">
-                1
-              </div>
-              <h3 class="font-bold text-primary text-base mb-1">Obtain Form</h3>
-              <p class="text-xs text-gray-500 leading-relaxed max-w-xs mx-auto">Purchase admission application booklet at the school office, or send an inquiry to download.</p>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="text-center relative">
-              <div class="h-16 w-16 rounded-2xl bg-primary text-white mx-auto flex items-center justify-center font-bold text-xl mb-4 shadow-md">
-                2
-              </div>
-              <h3 class="font-bold text-primary text-base mb-1">Submit Credentials</h3>
-              <p class="text-xs text-gray-500 leading-relaxed max-w-xs mx-auto">Complete the form and submit alongside birth certificate copies and previous academic transcripts.</p>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="text-center relative">
-              <div class="h-16 w-16 rounded-2xl bg-primary text-white mx-auto flex items-center justify-center font-bold text-xl mb-4 shadow-md">
-                3
-              </div>
-              <h3 class="font-bold text-primary text-base mb-1">Screening Exam</h3>
-              <p class="text-xs text-gray-500 leading-relaxed max-w-xs mx-auto">Prospective pupils will sit for a friendly assessment exam (maths, logic & literacy).</p>
-            </div>
-
-            <!-- Step 4 -->
-            <div class="text-center relative">
-              <div class="h-16 w-16 rounded-2xl bg-secondary text-white mx-auto flex items-center justify-center font-bold text-xl mb-4 shadow-md">
-                4
-              </div>
-              <h3 class="font-bold text-primary text-base mb-1">Admission Offer</h3>
-              <p class="text-xs text-gray-500 leading-relaxed max-w-xs mx-auto">Successful candidates are offered admission, complete fees registration and purchase uniforms.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Fee Structure & Uniform details -->
-      <section class="py-20 bg-accent/50 border-y border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-xs font-bold tracking-widest text-secondary uppercase block mb-1">Financial Transparency</span>
-            <h2 class="text-3xl font-extrabold text-primary uppercase tracking-tight">Fee Guide (Per Term)</h2>
-            <p class="mt-3 text-gray-500 text-sm">
-              We offer exceptional educational standards while keeping fees completely affordable and reasonable for working families.
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
-            <!-- Nursery Fee Card -->
-            <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm flex flex-col justify-between">
-              <div>
-                <span class="text-xs font-bold uppercase tracking-widest text-gray-400">Level</span>
-                <h3 class="text-xl font-bold text-primary uppercase mt-1 mb-6">Nursery Department</h3>
-                
-                <div class="space-y-4 border-t border-gray-100 pt-5 text-sm text-gray-600">
-                  <div class="flex justify-between pb-2 border-b border-gray-50">
-                    <span>Tuition Fee</span>
-                    <span class="font-bold text-primary">₦25,000</span>
-                  </div>
-                  <div class="flex justify-between pb-2 border-b border-gray-50">
-                    <span>E-Learning & ICT</span>
-                    <span class="font-bold text-primary">₦5,000</span>
-                  </div>
-                  <div class="flex justify-between pb-2 border-b border-gray-50">
-                    <span>Sports & Development</span>
-                    <span class="font-bold text-primary">₦3,000</span>
-                  </div>
-                  <div class="flex justify-between pb-1">
-                    <span>Medical & Insurance</span>
-                    <span class="font-bold text-primary">₦2,000</span>
-                  </div>
+            <!-- 1. Admission Requirements -->
+            <div class="space-y-6" id="admission-requirements-section">
+              <div class="flex items-center space-x-3">
+                <div class="p-2.5 bg-primary/10 rounded-xl text-primary">
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
-              </div>
-
-              <div class="border-t border-gray-100 mt-8 pt-5 text-center">
-                <p class="text-xs text-gray-400 uppercase tracking-widest font-semibold">Total Estimated Termly</p>
-                <p class="text-3xl font-extrabold text-secondary mt-1">₦35,000</p>
-              </div>
-            </div>
-
-            <!-- Primary Fee Card -->
-            <div class="bg-white rounded-3xl p-8 border-2 border-primary shadow-md flex flex-col justify-between relative">
-              <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-bold tracking-widest uppercase px-4 py-1 rounded-full">
-                Most Enrolled
+                <h2 class="text-2xl font-extrabold text-primary uppercase tracking-tight">Admission Requirements</h2>
               </div>
               
-              <div>
-                <span class="text-xs font-bold uppercase tracking-widest text-gray-400">Level</span>
-                <h3 class="text-xl font-bold text-primary uppercase mt-1 mb-6">Primary Department</h3>
-                
-                <div class="space-y-4 border-t border-gray-100 pt-5 text-sm text-gray-600">
-                  <div class="flex justify-between pb-2 border-b border-gray-50">
-                    <span>Tuition Fee</span>
-                    <span class="font-bold text-primary">₦35,000</span>
-                  </div>
-                  <div class="flex justify-between pb-2 border-b border-gray-50">
-                    <span>E-Learning & ICT</span>
-                    <span class="font-bold text-primary">₦7,000</span>
-                  </div>
-                  <div class="flex justify-between pb-2 border-b border-gray-50">
-                    <span>Sports & Development</span>
-                    <span class="font-bold text-primary">₦4,000</span>
-                  </div>
-                  <div class="flex justify-between pb-1">
-                    <span>Medical & Insurance</span>
-                    <span class="font-bold text-primary">₦4,000</span>
-                  </div>
+              <div class="space-y-4">
+                <div class="bg-accent/40 border border-gray-100 rounded-2xl p-5">
+                  <h3 class="font-bold text-primary text-base mb-2">Nursery Department</h3>
+                  <p class="text-sm text-gray-600 leading-relaxed">
+                    Pupils entering our Nursery, Creche or Playgroup classes must have reached a minimum age of 2 years by September of the entry year. Parents must provide full immunization charts and proof of healthy physical status.
+                  </p>
                 </div>
-              </div>
-
-              <div class="border-t border-gray-100 mt-8 pt-5 text-center">
-                <p class="text-xs text-gray-400 uppercase tracking-widest font-semibold">Total Estimated Termly</p>
-                <p class="text-3xl font-extrabold text-secondary mt-1">₦50,000</p>
+                
+                <div class="bg-accent/40 border border-gray-100 rounded-2xl p-5">
+                  <h3 class="font-bold text-primary text-base mb-2">Primary Department</h3>
+                  <p class="text-sm text-gray-600 leading-relaxed">
+                    Pupils enrolling for Primary classes must have reached a minimum age of 6 years by September of the entry year. Candidates undergo a friendly oral reading and logical assessment to check classroom placement readiness.
+                  </p>
+                </div>
+                
+                <div class="bg-accent/40 border border-gray-100 rounded-2xl p-5">
+                  <h3 class="font-bold text-primary text-base mb-2">Secondary Department</h3>
+                  <p class="text-sm text-gray-600 leading-relaxed">
+                    Candidates seeking enrollment in JSS 1 - JSS 3 or SSS 1 - SSS 2 must have successfully graduated from primary school. A standard, competitive screening exam in English Language, Mathematics, and General Studies is conducted for proper placement.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <!-- Secondary Fee Card -->
-            <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm flex flex-col justify-between">
-              <div>
-                <span class="text-xs font-bold uppercase tracking-widest text-gray-400">Level</span>
-                <h3 class="text-xl font-bold text-primary uppercase mt-1 mb-6">Secondary Department</h3>
-                
-                <div class="space-y-4 border-t border-gray-100 pt-5 text-sm text-gray-600">
-                  <div class="flex justify-between pb-2 border-b border-gray-50">
-                    <span>Tuition Fee</span>
-                    <span class="font-bold text-primary">₦55,000</span>
-                  </div>
-                  <div class="flex justify-between pb-2 border-b border-gray-50">
-                    <span>Science Lab practicals</span>
-                    <span class="font-bold text-primary">₦10,000</span>
-                  </div>
-                  <div class="flex justify-between pb-2 border-b border-gray-50">
-                    <span>E-Learning & Coding ICT</span>
-                    <span class="font-bold text-primary">₦10,000</span>
-                  </div>
-                  <div class="flex justify-between pb-1">
-                    <span>Medical, Sports & Insurance</span>
-                    <span class="font-bold text-primary">₦5,000</span>
-                  </div>
+            <!-- 2. Available Classes -->
+            <div class="space-y-6" id="available-classes-section">
+              <div class="flex items-center space-x-3">
+                <div class="p-2.5 bg-primary/10 rounded-xl text-primary">
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
                 </div>
+                <h2 class="text-2xl font-extrabold text-primary uppercase tracking-tight">Available Classes</h2>
               </div>
 
-              <div class="border-t border-gray-100 mt-8 pt-5 text-center">
-                <p class="text-xs text-gray-400 uppercase tracking-widest font-semibold">Total Estimated Termly</p>
-                <p class="text-3xl font-extrabold text-secondary mt-1">₦80,000</p>
+              <div class="space-y-4">
+                <div class="bg-accent/40 border border-gray-100 rounded-2xl p-5 flex items-start space-x-4">
+                  <div class="text-3xl">🧸</div>
+                  <div>
+                    <h3 class="font-bold text-primary text-base mb-1">Nursery & Pre-School</h3>
+                    <p class="text-xs font-semibold text-secondary uppercase tracking-wider mb-2">Ages: 2 - 5 Years</p>
+                    <div class="flex flex-wrap gap-1.5">
+                      <span class="px-2.5 py-1 text-xs bg-white border border-gray-100 rounded-lg text-gray-600">Creche</span>
+                      <span class="px-2.5 py-1 text-xs bg-white border border-gray-100 rounded-lg text-gray-600">Playgroup</span>
+                      <span class="px-2.5 py-1 text-xs bg-white border border-gray-100 rounded-lg text-gray-600">Nursery 1</span>
+                      <span class="px-2.5 py-1 text-xs bg-white border border-gray-100 rounded-lg text-gray-600">Nursery 2</span>
+                      <span class="px-2.5 py-1 text-xs bg-white border border-gray-100 rounded-lg text-gray-600">Nursery 3</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-accent/40 border border-gray-100 rounded-2xl p-5 flex items-start space-x-4">
+                  <div class="text-3xl">🎒</div>
+                  <div>
+                    <h3 class="font-bold text-primary text-base mb-1">Primary School</h3>
+                    <p class="text-xs font-semibold text-secondary uppercase tracking-wider mb-2">Ages: 6 - 11 Years</p>
+                    <div class="flex flex-wrap gap-1.5">
+                      <span class="px-2.5 py-1 text-xs bg-white border border-gray-100 rounded-lg text-gray-600">Basic 1</span>
+                      <span class="px-2.5 py-1 text-xs bg-white border border-gray-100 rounded-lg text-gray-600">Basic 2</span>
+                      <span class="px-2.5 py-1 text-xs bg-white border border-gray-100 rounded-lg text-gray-600">Basic 3</span>
+                      <span class="px-2.5 py-1 text-xs bg-white border border-gray-100 rounded-lg text-gray-600">Basic 4</span>
+                      <span class="px-2.5 py-1 text-xs bg-white border border-gray-100 rounded-lg text-gray-600">Basic 5</span>
+                      <span class="px-2.5 py-1 text-xs bg-white border border-gray-100 rounded-lg text-gray-600">Basic 6</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-accent/40 border border-gray-100 rounded-2xl p-5 flex items-start space-x-4">
+                  <div class="text-3xl">🏫</div>
+                  <div>
+                    <h3 class="font-bold text-primary text-base mb-1">Secondary School</h3>
+                    <p class="text-xs font-semibold text-secondary uppercase tracking-wider mb-2">Ages: 12 - 17 Years</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-2">
+                      <div>
+                        <p class="text-xs font-bold text-primary uppercase tracking-wide mb-1">Junior Secondary (JSS)</p>
+                        <div class="flex flex-wrap gap-1">
+                          <span class="px-2 py-0.5 text-xs bg-white border border-gray-100 rounded-lg text-gray-600">JSS 1</span>
+                          <span class="px-2 py-0.5 text-xs bg-white border border-gray-100 rounded-lg text-gray-600">JSS 2</span>
+                          <span class="px-2 py-0.5 text-xs bg-white border border-gray-100 rounded-lg text-gray-600">JSS 3</span>
+                        </div>
+                      </div>
+                      <div>
+                        <p class="text-xs font-bold text-primary uppercase tracking-wide mb-1">Senior Secondary (SSS)</p>
+                        <div class="flex flex-wrap gap-1">
+                          <span class="px-2 py-0.5 text-xs bg-white border border-gray-100 rounded-lg text-gray-600">SSS 1</span>
+                          <span class="px-2 py-0.5 text-xs bg-white border border-gray-100 rounded-lg text-gray-600">SSS 2</span>
+                          <span class="px-2 py-0.5 text-xs bg-white border border-gray-100 rounded-lg text-gray-600">SSS 3</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -292,67 +234,208 @@
         </div>
       </section>
 
-      <!-- Entrance Exam Criteria -->
-      <section class="py-20 bg-white">
+      <!-- Procedures and Required Documents Grid -->
+      <section class="py-16 bg-accent/40 border-y border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="bg-primary text-white rounded-3xl p-8 sm:p-12 relative overflow-hidden">
-            <div class="absolute -bottom-20 -right-20 h-64 w-64 bg-secondary/15 rounded-full blur-2xl"></div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <span class="text-xs font-bold uppercase tracking-widest text-secondary block mb-1">Screening Exams</span>
-                <h3 class="text-2xl sm:text-3xl font-extrabold uppercase tracking-tight mb-4">Entrance Examination Details</h3>
-                <p class="text-sm text-gray-300 leading-relaxed mb-6">
-                  We schedule friendly evaluation examinations to understand a child's strengths, weaknesses, and academic level to place them correctly.
-                </p>
-                <div class="space-y-3.5 text-sm text-gray-200">
-                  <div class="flex items-center space-x-3">
-                    <svg class="h-4.5 w-4.5 text-secondary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <span><strong>Exam Days:</strong> Every Saturday from July to September.</span>
+            <!-- 3. Admission Procedure -->
+            <div class="space-y-6" id="admission-procedure-section">
+              <div class="flex items-center space-x-3">
+                <div class="p-2.5 bg-primary/10 rounded-xl text-primary">
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" /></svg>
+                </div>
+                <h2 class="text-2xl font-extrabold text-primary uppercase tracking-tight">Admission Procedure</h2>
+              </div>
+
+              <!-- Steps List -->
+              <div class="space-y-4">
+                <div class="flex items-start space-x-4 bg-white border border-gray-100 rounded-2xl p-5">
+                  <span class="flex items-center justify-center h-10 w-10 rounded-xl bg-primary text-white font-bold text-sm shrink-0">1</span>
+                  <div>
+                    <h3 class="font-bold text-primary text-base">Acquisition of Form</h3>
+                    <p class="text-sm text-gray-500 mt-1 leading-relaxed">
+                      Parents/Guardians can obtain our physical admission booklet from the school registration desk on weekdays.
+                    </p>
                   </div>
-                  <div class="flex items-center space-x-3">
-                    <svg class="h-4.5 w-4.5 text-secondary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <span><strong>Duration:</strong> 9:00 AM - 12:00 PM.</span>
+                </div>
+
+                <div class="flex items-start space-x-4 bg-white border border-gray-100 rounded-2xl p-5">
+                  <span class="flex items-center justify-center h-10 w-10 rounded-xl bg-primary text-white font-bold text-sm shrink-0">2</span>
+                  <div>
+                    <h3 class="font-bold text-primary text-base">Submission & Verification</h3>
+                    <p class="text-sm text-gray-500 mt-1 leading-relaxed">
+                      Complete all questions in the booklet. Submit it at the registrar’s desk together with copies of birth certificates and prior academic grades.
+                    </p>
                   </div>
-                  <div class="flex items-center space-x-3">
-                    <svg class="h-4.5 w-4.5 text-secondary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <span><strong>Subjects:</strong> English Language, Mathematics, and General Logical Reasoning.</span>
+                </div>
+
+                <div class="flex items-start space-x-4 bg-white border border-gray-100 rounded-2xl p-5">
+                  <span class="flex items-center justify-center h-10 w-10 rounded-xl bg-primary text-white font-bold text-sm shrink-0">3</span>
+                  <div>
+                    <h3 class="font-bold text-primary text-base">Scheduled Screening</h3>
+                    <p class="text-sm text-gray-500 mt-1 leading-relaxed">
+                      Bring the child on the designated Saturday for our interactive math, logical, and basic english literacy evaluation screening.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-4 bg-white border border-gray-100 rounded-2xl p-5">
+                  <span class="flex items-center justify-center h-10 w-10 rounded-xl bg-secondary text-white font-bold text-sm shrink-0">4</span>
+                  <div>
+                    <h3 class="font-bold text-primary text-base">Offer & Fee Settlement</h3>
+                    <p class="text-sm text-gray-500 mt-1 leading-relaxed">
+                      Successful candidates receive official admission letters. Clear registry costs to collect books, badges, and school uniforms.
+                    </p>
                   </div>
                 </div>
               </div>
+            </div>
 
-              <!-- Required credentials box -->
-              <div class="bg-white text-gray-800 rounded-2xl p-6 sm:p-8 shadow-xl border border-white/10">
-                <h4 class="font-bold text-primary text-lg mb-4">Required Documents for Screening:</h4>
-                <ul class="space-y-3 text-sm text-gray-600">
-                  <li class="flex items-start space-x-2.5">
-                    <svg class="h-4.5 w-4.5 text-secondary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <span>Photocopy of child's Birth Certificate (NPC endorsed).</span>
-                  </li>
-                  <li class="flex items-start space-x-2.5">
-                    <svg class="h-4.5 w-4.5 text-secondary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <span>Two (2) recent colored passport photographs.</span>
-                  </li>
-                  <li class="flex items-start space-x-2.5">
-                    <svg class="h-4.5 w-4.5 text-secondary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <span>Last Term Academic Report Sheet from previous school.</span>
-                  </li>
-                  <li class="flex items-start space-x-2.5">
-                    <svg class="h-4.5 w-4.5 text-secondary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <span>Proof of payment of registration form (₦5,000).</span>
-                  </li>
-                </ul>
+            <!-- 4. Required Documents -->
+            <div class="space-y-6 flex flex-col justify-between h-full" id="required-documents-section">
+              <div class="space-y-6">
+                <div class="flex items-center space-x-3">
+                  <div class="p-2.5 bg-primary/10 rounded-xl text-primary">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" /></svg>
+                  </div>
+                  <h2 class="text-2xl font-extrabold text-primary uppercase tracking-tight">Required Documents</h2>
+                </div>
+
+                <div class="bg-white border border-gray-100 rounded-3xl p-6 sm:p-8 shadow-sm">
+                  <p class="text-sm text-gray-500 mb-6 leading-relaxed">
+                    Please ensure the following credentials are fully compiled and attached upon submitting the application form:
+                  </p>
+
+                  <ul class="space-y-4 text-sm text-gray-600">
+                    <li class="flex items-start space-x-3">
+                      <svg class="h-5 w-5 text-secondary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      <span>Photocopy of candidate's Certified Birth Certificate (NPC endorsed).</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                      <svg class="h-5 w-5 text-secondary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      <span>Two (2) recent colored passport-sized photographs of the student.</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                      <svg class="h-5 w-5 text-secondary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      <span>Previous terminal academic transcripts / last Termly Report Card.</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                      <svg class="h-5 w-5 text-secondary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      <span>Medical fitness clearance form / pupil immunization card copy.</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
 
+              <!-- Apply Now CTA Button Block -->
+              <div class="pt-6 text-center lg:text-left">
+                <button id="apply-admission-btn" class="w-full sm:w-auto px-10 py-5 bg-primary hover:bg-secondary text-white font-bold text-base uppercase tracking-wider rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 inline-flex items-center justify-center space-x-3">
+                  <span>Apply for Admission</span>
+                  <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </button>
+              </div>
             </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. School Contact Information -->
+      <section class="py-16 bg-white" id="school-contact-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-xs font-bold tracking-widest text-secondary uppercase block mb-1">Admissions Desk</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-primary uppercase tracking-tight">School Contact Information</h2>
+            <p class="mt-2 text-gray-500 text-sm">For details regarding application booklet pricing, screening dates, and transport fees.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Address card -->
+            <div class="bg-accent/40 rounded-2xl p-6 border border-gray-100 flex flex-col justify-between">
+              <div>
+                <span class="text-2xl block mb-3">📍</span>
+                <h4 class="font-bold text-primary text-base mb-1">Office Location</h4>
+                <p class="text-xs text-gray-500 leading-relaxed mt-2">
+                  Agbugburu Village, Odeda Local Government, Abeokuta, Ogun State, Nigeria.
+                </p>
+              </div>
+              <div class="border-t border-gray-200/50 mt-5 pt-3.5 flex justify-between items-center text-xs">
+                <span class="text-gray-400">Main Admin Desk</span>
+                <span class="font-bold text-primary">In-Person</span>
+              </div>
+            </div>
+
+            <!-- Hotline card -->
+            <div class="bg-accent/40 rounded-2xl p-6 border border-gray-100 flex flex-col justify-between">
+              <div>
+                <span class="text-2xl block mb-3">📞</span>
+                <h4 class="font-bold text-primary text-base mb-1">Admissions Hotline</h4>
+                <p class="text-xs text-gray-500 leading-relaxed mt-2">
+                  +234 803 123 4567<br>
+                  +234 815 987 6543
+                </p>
+              </div>
+              <div class="border-t border-gray-200/50 mt-5 pt-3.5 flex justify-between items-center text-xs">
+                <span class="text-gray-400">Office Working Hours</span>
+                <span class="font-bold text-primary">7:30AM - 4PM</span>
+              </div>
+            </div>
+
+            <!-- Email card -->
+            <div class="bg-accent/40 rounded-2xl p-6 border border-gray-100 flex flex-col justify-between">
+              <div>
+                <span class="text-2xl block mb-3">✉️</span>
+                <h4 class="font-bold text-primary text-base mb-1">Email Inquiries</h4>
+                <p class="text-xs text-gray-500 leading-relaxed mt-2">
+                  admissions@hisgraceschools.edu.ng<br>
+                  info@hisgraceschools.edu.ng
+                </p>
+              </div>
+              <div class="border-t border-gray-200/50 mt-5 pt-3.5 flex justify-between items-center text-xs">
+                <span class="text-gray-400">Electronic Helpdesk</span>
+                <span class="font-bold text-primary">24hr Response</span>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
     </main>
 
+    <!-- Modal for Admission Portal Coming Soon -->
+    <div id="coming-soon-modal" class="hidden fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4 bg-dark-blue/80 backdrop-blur-sm animate-fadeIn animate-[fadeIn_0.2s_ease-out]">
+      <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-gray-100 relative">
+        <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg p-1 transition-all">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <div class="text-center space-y-4">
+          <div class="h-16 w-16 bg-primary/10 text-primary text-3xl rounded-2xl flex items-center justify-center mx-auto mb-4">
+            🚀
+          </div>
+          <h3 class="text-xl font-bold text-primary uppercase tracking-tight">Admission Notice</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Online Admission Portal Coming Soon.
+          </p>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            We are preparing a fully secure electronic application platform for our upcoming school registrations. In the meantime, kindly download our syllabus booklet or contact the school registrar via the Admissions Hotline.
+          </p>
+          <div class="pt-4">
+            <button id="close-modal-btn-confirm" class="w-full py-3 bg-primary hover:bg-secondary text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-md transition-all">
+              Acknowledge
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Professional Footer -->
-    <footer class="bg-[#0f172a] text-white pt-16 pb-8">
+    <footer class="bg-dark-blue text-white pt-16 pb-8">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-gray-800">
           
@@ -484,5 +567,38 @@
 
     <!-- Global JS Script -->
     <script src="assets/js/main.js"></script>
+    <!-- Page Specific Script for Modal Toggle -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('coming-soon-modal');
+        const applyBtn = document.getElementById('apply-admission-btn');
+        const closeBtn = document.getElementById('close-modal-btn');
+        const confirmBtn = document.getElementById('close-modal-btn-confirm');
+
+        if (applyBtn && modal) {
+          applyBtn.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+          });
+        }
+
+        const hideModal = () => {
+          if (modal) {
+            modal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+          }
+        };
+
+        if (closeBtn) closeBtn.addEventListener('click', hideModal);
+        if (confirmBtn) confirmBtn.addEventListener('click', hideModal);
+
+        // Click outside backdrop to close
+        if (modal) {
+          modal.addEventListener('click', (e) => {
+            if (e.target === modal) hideModal();
+          });
+        }
+      });
+    </script>
   </body>
 </html>
