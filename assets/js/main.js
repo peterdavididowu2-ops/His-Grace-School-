@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupMobileMenu();
   setupContactForm();
   setupHeaderScroll();
+  setupHeroSlider();
 });
 
 /**
@@ -116,3 +117,95 @@ function setupHeaderScroll() {
     }
   });
 }
+
+/**
+ * Handle automatic and interactive fade slider for the hero section
+ */
+function setupHeroSlider() {
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.slider-dot');
+  const prevBtn = document.getElementById('slider-prev');
+  const nextBtn = document.getElementById('slider-next');
+
+  if (slides.length === 0) return;
+
+  let currentSlide = 0;
+  let slideInterval = null;
+  const intervalTime = 6000; // Transition every 6 seconds
+
+  function showSlide(index) {
+    // Wrap index around boundaries
+    if (index >= slides.length) {
+      currentSlide = 0;
+    } else if (index < 0) {
+      currentSlide = slides.length - 1;
+    } else {
+      currentSlide = index;
+    }
+
+    // Hide all slides and reset dot styles
+    slides.forEach((slide) => {
+      slide.style.opacity = '0';
+      slide.style.zIndex = '0';
+    });
+    dots.forEach((dot) => {
+      dot.className = 'slider-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300';
+    });
+
+    // Show current slide
+    slides[currentSlide].style.opacity = '1';
+    slides[currentSlide].style.zIndex = '1';
+
+    // Highlight current dot
+    if (dots[currentSlide]) {
+      dots[currentSlide].className = 'slider-dot w-3 h-3 rounded-full bg-white transition-all duration-300 ring-2 ring-primary/20';
+    }
+  }
+
+  function nextSlide() {
+    showSlide(currentSlide + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentSlide - 1);
+  }
+
+  function startAutoSlide() {
+    stopAutoSlide();
+    slideInterval = setInterval(nextSlide, intervalTime);
+  }
+
+  function stopAutoSlide() {
+    if (slideInterval) {
+      clearInterval(slideInterval);
+    }
+  }
+
+  // Next and Previous controls
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      startAutoSlide(); // Reset timer
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      startAutoSlide(); // Reset timer
+    });
+  }
+
+  // Dot navigation
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      showSlide(index);
+      startAutoSlide(); // Reset timer
+    });
+  });
+
+  // Start slideshow
+  showSlide(currentSlide);
+  startAutoSlide();
+}
+
