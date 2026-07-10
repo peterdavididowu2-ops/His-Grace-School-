@@ -112,14 +112,16 @@
       <section class="relative text-white overflow-hidden py-24 sm:py-32 min-h-[580px] flex items-center">
         <!-- Background Image Slideshow -->
         <div class="absolute inset-0 z-0">
-          <!-- Slide 1 -->
-          <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100 bg-cover bg-center" style="background-image: url('assets/images/building_exterior.jpg');"></div>
-          <!-- Slide 2 -->
-          <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 bg-cover bg-center" style="background-image: url('assets/images/classroom_male_teacher.jpg');"></div>
-          <!-- Slide 3 -->
-          <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 bg-cover bg-center" style="background-image: url('assets/images/classroom_female_teacher.jpg');"></div>
-          <!-- Slide 4 -->
-          <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 bg-cover bg-center" style="background-image: url('assets/images/building_side.jpg');"></div>
+          <!-- Slide 1: Main Building Exterior -->
+          <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100 bg-cover bg-center" style="background-image: url('assets/images/building_exterior.jpg');" role="img" aria-label="His Grace School main building exterior"></div>
+          <!-- Slide 2: Active Classroom Session -->
+          <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 bg-cover bg-center" style="background-image: url('assets/images/classroom_female_teacher.jpg');" role="img" aria-label="Engaging classroom teaching session"></div>
+          <!-- Slide 3: Clean Empty Classroom -->
+          <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 bg-cover bg-center" style="background-image: url('assets/images/empty_classroom.jpg');" role="img" aria-label="Spacious and modern school classroom setup"></div>
+          <!-- Slide 4: Campus Walkways veranda -->
+          <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 bg-cover bg-center" style="background-image: url('assets/images/building_side.jpg');" role="img" aria-label="Serene verandas and corridors of learning block"></div>
+          <!-- Slide 5: Walkway architecture details -->
+          <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 bg-cover bg-center" style="background-image: url('assets/images/classroom_male_teacher.jpg');" role="img" aria-label="Beautifully detailed modern corridor block"></div>
           <!-- Dark/Overlay to guarantee excellent text contrast -->
           <div class="absolute inset-0 bg-gradient-to-r from-blue-950/95 via-blue-900/85 to-black/75"></div>
         </div>
@@ -207,6 +209,7 @@
           <button class="slider-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" aria-label="Go to Slide 2" data-index="1"></button>
           <button class="slider-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" aria-label="Go to Slide 3" data-index="2"></button>
           <button class="slider-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" aria-label="Go to Slide 4" data-index="3"></button>
+          <button class="slider-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" aria-label="Go to Slide 5" data-index="4"></button>
         </div>
 
         <!-- Prev/Next buttons -->
@@ -612,39 +615,94 @@
             </a>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Item 1 -->
-            <div class="group relative rounded-2xl overflow-hidden shadow-sm aspect-[4/3] border border-gray-100 bg-gray-100">
-              <img src="assets/images/classroom_male_teacher.jpg" alt="Active Learning Session" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" referrerpolicy="no-referrer" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                <span class="text-[10px] font-bold uppercase text-accent tracking-widest mb-0.5">Classrooms</span>
-                <h4 class="text-sm font-semibold text-white">Interactive Science Class</h4>
+          <!-- Beautiful Bento Grid responsive gallery layout of 5 official school photos -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
+            
+            <!-- Card 1: Active Classroom (Academics) -->
+            <div class="group relative rounded-2xl overflow-hidden shadow-md aspect-video md:aspect-auto md:h-80 lg:col-span-3 border border-gray-100 bg-gray-100 cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1 gallery-card" data-index="0">
+              <img src="assets/images/classroom_female_teacher.jpg" alt="Vibrant classroom session at His Grace School with teacher and students in uniforms" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" referrerpolicy="no-referrer" />
+              <!-- Hover indicator -->
+              <div class="absolute top-4 right-4 bg-primary/80 backdrop-blur-sm p-2 rounded-xl text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                </svg>
+              </div>
+              <!-- Captions -->
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                <span class="text-xs font-bold uppercase text-accent tracking-widest mb-1">Academics</span>
+                <h4 class="text-lg font-bold text-white leading-tight">Active Classroom Learning</h4>
+                <p class="text-xs text-white/80 mt-1">Nurturing bright minds through modern instructional strategies.</p>
               </div>
             </div>
-            <!-- Item 2 -->
-            <div class="group relative rounded-2xl overflow-hidden shadow-sm aspect-[4/3] border border-gray-100 bg-gray-100">
-              <img src="assets/images/classroom_female_teacher.jpg" alt="Focused Study Session" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" referrerpolicy="no-referrer" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                <span class="text-[10px] font-bold uppercase text-accent tracking-widest mb-0.5">Academic</span>
-                <h4 class="text-sm font-semibold text-white">Attentive Classroom Study</h4>
+
+            <!-- Card 2: School Building (Campus) -->
+            <div class="group relative rounded-2xl overflow-hidden shadow-md aspect-video md:aspect-auto md:h-80 lg:col-span-3 border border-gray-100 bg-gray-100 cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1 gallery-card" data-index="1">
+              <img src="assets/images/building_exterior.jpg" alt="His Grace School main building exterior - A modern, spacious learning facility in Abeokuta" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" referrerpolicy="no-referrer" />
+              <!-- Hover indicator -->
+              <div class="absolute top-4 right-4 bg-primary/80 backdrop-blur-sm p-2 rounded-xl text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                </svg>
+              </div>
+              <!-- Captions -->
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                <span class="text-xs font-bold uppercase text-accent tracking-widest mb-1">Campus</span>
+                <h4 class="text-lg font-bold text-white leading-tight">Main Building Exterior</h4>
+                <p class="text-xs text-white/80 mt-1">Our purpose-built campus block provides a secure, modern learning facility.</p>
               </div>
             </div>
-            <!-- Item 3 -->
-            <div class="group relative rounded-2xl overflow-hidden shadow-sm aspect-[4/3] border border-gray-100 bg-gray-100">
-              <img src="assets/images/empty_classroom.jpg" alt="Modern Learning Environment" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" referrerpolicy="no-referrer" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+
+            <!-- Card 3: Spacious Classroom (Facilities) -->
+            <div class="group relative rounded-2xl overflow-hidden shadow-md aspect-[4/3] lg:col-span-2 border border-gray-100 bg-gray-100 cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1 gallery-card" data-index="2">
+              <img src="assets/images/empty_classroom.jpg" alt="Clean, well-lit classroom setup with dual desks and whiteboards at His Grace School" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" referrerpolicy="no-referrer" />
+              <!-- Hover indicator -->
+              <div class="absolute top-4 right-4 bg-primary/80 backdrop-blur-sm p-2 rounded-xl text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                </svg>
+              </div>
+              <!-- Captions -->
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
                 <span class="text-[10px] font-bold uppercase text-accent tracking-widest mb-0.5">Facilities</span>
-                <h4 class="text-sm font-semibold text-white">Modern Clean Facilities</h4>
+                <h4 class="text-base font-bold text-white leading-tight">Modern Learning Setup</h4>
+                <p class="text-[11px] text-white/80 mt-0.5">Spacious learning rooms with ergonomic seating arrangement.</p>
               </div>
             </div>
-            <!-- Item 4 -->
-            <div class="group relative rounded-2xl overflow-hidden shadow-sm aspect-[4/3] border border-gray-100 bg-gray-100">
-              <img src="assets/images/building_side.jpg" alt="Serene School Environment" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" referrerpolicy="no-referrer" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+
+            <!-- Card 4: Walkway Corridor (Campus) -->
+            <div class="group relative rounded-2xl overflow-hidden shadow-md aspect-[4/3] lg:col-span-2 border border-gray-100 bg-gray-100 cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1 gallery-card" data-index="3">
+              <img src="assets/images/building_side.jpg" alt="The spacious and serene veranda walkways of the His Grace School learning block" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" referrerpolicy="no-referrer" />
+              <!-- Hover indicator -->
+              <div class="absolute top-4 right-4 bg-primary/80 backdrop-blur-sm p-2 rounded-xl text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                </svg>
+              </div>
+              <!-- Captions -->
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
                 <span class="text-[10px] font-bold uppercase text-accent tracking-widest mb-0.5">Campus</span>
-                <h4 class="text-sm font-semibold text-white">Serene School Environment</h4>
+                <h4 class="text-base font-bold text-white leading-tight">Serene Campus Walkways</h4>
+                <p class="text-[11px] text-white/80 mt-0.5">Quiet corridors designed to foster study and peaceful learning.</p>
               </div>
             </div>
+
+            <!-- Card 5: Infrastructure (Facilities) -->
+            <div class="group relative rounded-2xl overflow-hidden shadow-md aspect-[4/3] lg:col-span-2 border border-gray-100 bg-gray-100 cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1 gallery-card" data-index="4">
+              <img src="assets/images/classroom_male_teacher.jpg" alt="A close-up view of the clean, freshly painted school walkway corridor" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" referrerpolicy="no-referrer" />
+              <!-- Hover indicator -->
+              <div class="absolute top-4 right-4 bg-primary/80 backdrop-blur-sm p-2 rounded-xl text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                </svg>
+              </div>
+              <!-- Captions -->
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                <span class="text-[10px] font-bold uppercase text-accent tracking-widest mb-0.5">Infrastructure</span>
+                <h4 class="text-base font-bold text-white leading-tight">Walkway Architecture</h4>
+                <p class="text-[11px] text-white/80 mt-0.5">Freshly painted column facades matching our pristine aesthetic.</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -853,6 +911,45 @@
         </div>
       </div>
     </footer>
+
+    <!-- Beautiful Lightbox Modal for Gallery -->
+    <div id="lightbox-modal" class="fixed inset-0 z-[100] hidden bg-black/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex items-center justify-center p-4 select-none">
+      <!-- Close Button -->
+      <button id="lightbox-close" class="absolute top-6 right-6 z-[110] p-2 text-white/70 hover:text-white hover:scale-110 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-200" aria-label="Close Lightbox">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Prev Button -->
+      <button id="lightbox-prev" class="absolute left-6 top-1/2 -translate-y-1/2 z-[110] p-3 text-white/70 hover:text-white hover:scale-110 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-200 hidden md:block" aria-label="Previous Image">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <!-- Next Button -->
+      <button id="lightbox-next" class="absolute right-6 top-1/2 -translate-y-1/2 z-[110] p-3 text-white/70 hover:text-white hover:scale-110 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-200 hidden md:block" aria-label="Next Image">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+      <!-- Lightbox Content Container -->
+      <div class="relative max-w-5xl w-full flex flex-col items-center justify-center animate-fade-in-up">
+        <!-- Main Image with Zoom transition -->
+        <div class="relative overflow-hidden rounded-2xl max-h-[70vh] w-full flex items-center justify-center">
+          <img id="lightbox-img" src="" alt="" class="max-h-[70vh] max-w-full object-contain rounded-xl shadow-2xl transition-all duration-300 transform scale-95 opacity-0" referrerpolicy="no-referrer" />
+        </div>
+
+        <!-- Details Footer -->
+        <div class="w-full text-center mt-4 px-4 max-w-2xl">
+          <span id="lightbox-category" class="text-xs font-bold uppercase tracking-widest text-accent"></span>
+          <h3 id="lightbox-title" class="text-sm md:text-base font-bold text-white mt-1"></h3>
+          <p id="lightbox-counter" class="text-[10px] md:text-xs text-white/50 mt-1.5 font-medium"></p>
+        </div>
+      </div>
+    </div>
 
     <!-- Global JS Script -->
     <script src="assets/js/main.js"></script>

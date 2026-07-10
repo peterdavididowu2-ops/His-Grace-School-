@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupContactForm();
   setupHeaderScroll();
   setupHeroSlider();
+  setupGalleryLightbox();
 });
 
 /**
@@ -207,5 +208,164 @@ function setupHeroSlider() {
   // Start slideshow
   showSlide(currentSlide);
   startAutoSlide();
+}
+
+/**
+ * Handle dynamic responsive lightbox overlay for the Home page gallery
+ */
+function setupGalleryLightbox() {
+  const cards = document.querySelectorAll('.gallery-card');
+  const modal = document.getElementById('lightbox-modal');
+  const img = document.getElementById('lightbox-img');
+  const category = document.getElementById('lightbox-category');
+  const title = document.getElementById('lightbox-title');
+  const counter = document.getElementById('lightbox-counter');
+  
+  const closeBtn = document.getElementById('lightbox-close');
+  const prevBtn = document.getElementById('lightbox-prev');
+  const nextBtn = document.getElementById('lightbox-next');
+
+  if (!cards.length || !modal || !img) return;
+
+  // Image data array matching the card indices
+  const galleryData = [
+    {
+      src: 'assets/images/classroom_female_teacher.jpg',
+      category: 'Academics',
+      title: 'Attentive Classroom Study & Female Teacher Instruction',
+      alt: 'Vibrant classroom session at His Grace School with teacher and students in uniforms'
+    },
+    {
+      src: 'assets/images/building_exterior.jpg',
+      category: 'Campus',
+      title: 'Main School Building & Infrastructure',
+      alt: 'His Grace School main building exterior - A modern, spacious learning facility in Abeokuta'
+    },
+    {
+      src: 'assets/images/empty_classroom.jpg',
+      category: 'Facilities',
+      title: 'Comfortable Modern Learning Environment',
+      alt: 'Clean, well-lit classroom setup with dual desks and whiteboards at His Grace School'
+    },
+    {
+      src: 'assets/images/building_side.jpg',
+      category: 'Campus',
+      title: 'Serene Campus Walkways & Learning Block',
+      alt: 'The spacious and serene veranda walkways of the His Grace School learning block'
+    },
+    {
+      src: 'assets/images/classroom_male_teacher.jpg',
+      category: 'Campus',
+      title: 'Spacious Corridor Architecture',
+      alt: 'A close-up view of the clean, freshly painted school walkway corridor'
+    }
+  ];
+
+  let currentIndex = 0;
+
+  function openLightbox(index) {
+    currentIndex = index;
+    const item = galleryData[currentIndex];
+    if (!item) return;
+
+    // Show modal container
+    modal.classList.remove('hidden');
+    document.body.classList.add('overflow-hidden'); // Disable background scrolling
+
+    // Fade in modal
+    setTimeout(() => {
+      modal.classList.remove('opacity-0');
+    }, 10);
+
+    updateLightboxContent(item);
+  }
+
+  function updateLightboxContent(item) {
+    // Zoom/fade out current image first for transition
+    img.classList.add('scale-95', 'opacity-0');
+
+    setTimeout(() => {
+      img.src = item.src;
+      img.alt = item.alt;
+      category.innerText = item.category;
+      title.innerText = item.title;
+      counter.innerText = `Photograph ${currentIndex + 1} of ${galleryData.length}`;
+
+      // Zoom/fade in new image
+      img.onload = () => {
+        img.classList.remove('scale-95', 'opacity-0');
+      };
+    }, 150);
+  }
+
+  function closeLightbox() {
+    modal.classList.add('opacity-0');
+    img.classList.add('scale-95', 'opacity-0');
+    document.body.classList.remove('overflow-hidden');
+
+    setTimeout(() => {
+      modal.classList.add('hidden');
+    }, 300);
+  }
+
+  function showNext() {
+    currentIndex = (currentIndex + 1) % galleryData.length;
+    updateLightboxContent(galleryData[currentIndex]);
+  }
+
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + galleryData.length) % galleryData.length;
+    updateLightboxContent(galleryData[currentIndex]);
+  }
+
+  // Click card to open
+  cards.forEach((card, index) => {
+    card.addEventListener('click', () => openLightbox(index));
+  });
+
+  // Close event
+  closeBtn.addEventListener('click', closeLightbox);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeLightbox();
+  });
+
+  // Prev/Next events
+  if (nextBtn) nextBtn.addEventListener('click', showNext);
+  if (prevBtn) prevBtn.addEventListener('click', showPrev);
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (modal.classList.contains('hidden')) return;
+    
+    if (e.key === 'Escape') {
+      closeLightbox();
+    } else if (e.key === 'ArrowRight') {
+      showNext();
+    } else if (e.key === 'ArrowLeft') {
+      showPrev();
+    }
+  });
+
+  // Support swipe/touch events for mobile
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  modal.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  modal.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  }, { passive: true });
+
+  function handleSwipe() {
+    const threshold = 50;
+    if (touchEndX < touchStartX - threshold) {
+      showNext(); // Swipe left
+    } else if (touchEndX > touchStartX + threshold) {
+      showPrev(); // Swipe right
+    }
+  }
 }
 
